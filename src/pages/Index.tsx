@@ -123,7 +123,7 @@ const Index = () => {
               <div className="flex items-center space-x-3">
                 <CheckCircle2 className="w-6 h-6 text-brand-primary flex-shrink-0" />
                 <span className="text-body text-gray-700">
-                  Retail & warehouse construction
+                  Residential & warehouse construction
                 </span>
               </div>
             </div>
@@ -181,9 +181,9 @@ const Index = () => {
             },
             {
               number: "03",
-              title: "Retail Construction",
+              title: "Residential Construction",
               description:
-                "Shopping centers, restaurants, and retail spaces that create engaging customer experiences and drive business success.",
+                "Custom homes, residential developments, and housing projects that provide quality living spaces for families and communities.",
               image:
                 "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             },
@@ -244,12 +244,12 @@ const Index = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 opacity-60">
           {[
+            "Public Stores",
             "ACME Construction",
             "BuildPro",
             "SteelWorks",
             "ModernBuild",
             "ConcretePlus",
-            "UrbanDev",
           ].map((client, index) => (
             <div
               key={index}
@@ -377,8 +377,8 @@ const Index = () => {
                   <Phone className="w-6 h-6 text-brand-primary" />
                 </div>
                 <div>
-                  <div className="text-white font-semibold">(555) 123-4567</div>
-                  <div className="text-gray-400">Give us a call</div>
+                  <div className="text-white font-semibold">240-739-9223</div>
+                  <div className="text-gray-400">Call Diego Hagans</div>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -387,7 +387,7 @@ const Index = () => {
                 </div>
                 <div>
                   <div className="text-white font-semibold">
-                    hello@probuild.com
+                    agcontractservice@gmail.com
                   </div>
                   <div className="text-gray-400">Send us an email</div>
                 </div>
@@ -468,7 +468,7 @@ const Index = () => {
               <ul className="space-y-2 text-gray-600">
                 <li>Commercial Construction</li>
                 <li>Warehouse Development</li>
-                <li>Retail Construction</li>
+                <li>Residential Construction</li>
                 <li>Project Management</li>
               </ul>
             </div>
