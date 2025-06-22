@@ -104,7 +104,7 @@
   }
 
   .service-card {
-    @apply group cursor-pointer transition-all duration-500 hover:scale-105;
+    @apply cursor-pointer transition-all duration-500 hover:scale-105;
   }
 
   .service-number {

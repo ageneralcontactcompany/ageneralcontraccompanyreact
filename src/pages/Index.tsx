@@ -221,7 +221,7 @@ const Index = () => {
           ].map((service, index) => (
             <div
               key={index}
-              className={`grid lg:grid-cols-2 gap-16 items-center service-card ${
+              className={`grid lg:grid-cols-2 gap-16 items-center service-card group ${
                 index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
               }`}
             >
