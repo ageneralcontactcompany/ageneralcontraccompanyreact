@@ -185,7 +185,7 @@ const Index = () => {
               description:
                 "Custom homes, residential developments, and housing projects that provide quality living spaces for families and communities.",
               image:
-                "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                "https://images.pexels.com/photos/7475555/pexels-photo-7475555.jpeg?auto=compress&cs=tinysrgb&w=800",
             },
             {
               number: "04",
