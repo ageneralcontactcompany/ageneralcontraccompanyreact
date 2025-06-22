@@ -100,31 +100,30 @@ const Index = () => {
             <h2 className="text-section lg:text-display-md font-semibold text-black mb-8 leading-tight">
               Transform your
               <br />
-              digital footprint
+              commercial project
             </h2>
             <p className="text-body text-gray-600 mb-8 leading-relaxed">
-              We help construction companies build powerful digital presences
-              that showcase their expertise, attract quality clients, and drive
-              business growth through strategic marketing and cutting-edge
-              technology.
+              We help businesses build exceptional commercial spaces that
+              showcase their brand, attract customers, and drive business growth
+              through expert construction and project management.
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <CheckCircle2 className="w-6 h-6 text-brand-primary flex-shrink-0" />
                 <span className="text-body text-gray-700">
-                  Strategic digital marketing campaigns
+                  Commercial building construction
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle2 className="w-6 h-6 text-brand-primary flex-shrink-0" />
                 <span className="text-body text-gray-700">
-                  Professional website design & development
+                  Office space design & build
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle2 className="w-6 h-6 text-brand-primary flex-shrink-0" />
                 <span className="text-body text-gray-700">
-                  Brand development & visual identity
+                  Retail & warehouse construction
                 </span>
               </div>
             </div>
@@ -157,8 +156,8 @@ const Index = () => {
             What We Do
           </h2>
           <p className="text-body text-gray-600 max-w-3xl mx-auto">
-            Comprehensive digital solutions tailored specifically for the
-            construction industry
+            Comprehensive construction solutions for commercial and business
+            projects of all sizes
           </p>
         </div>
 
@@ -166,41 +165,41 @@ const Index = () => {
           {[
             {
               number: "01",
-              title: "Web Design & Development",
+              title: "Commercial Construction",
               description:
-                "Modern, responsive websites that showcase your construction projects and expertise while driving lead generation.",
+                "Office buildings, retail spaces, and mixed-use developments built to the highest standards with modern design and functionality.",
               image:
                 "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             },
             {
               number: "02",
-              title: "Digital Marketing",
+              title: "Warehouse & Industrial",
               description:
-                "Strategic marketing campaigns that reach your target audience and generate qualified leads for your construction business.",
+                "Manufacturing facilities, distribution centers, and industrial spaces designed for efficiency and operational excellence.",
               image:
                 "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             },
             {
               number: "03",
-              title: "Project Documentation",
+              title: "Retail Construction",
               description:
-                "Professional photography and videography to document your projects and create compelling marketing materials.",
+                "Shopping centers, restaurants, and retail spaces that create engaging customer experiences and drive business success.",
               image:
                 "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             },
             {
               number: "04",
-              title: "Brand Development",
+              title: "Office Development",
               description:
-                "Complete brand identity development that positions your construction company as an industry leader.",
+                "Modern office spaces and corporate headquarters that inspire productivity and reflect your company's values.",
               image:
                 "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             },
             {
               number: "05",
-              title: "Digital Strategy",
+              title: "Project Management",
               description:
-                "Comprehensive digital transformation strategies that modernize your business operations and client interactions.",
+                "End-to-end construction management ensuring your project is completed on time, within budget, and to specification.",
               image:
                 "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             },
@@ -279,9 +278,9 @@ const Index = () => {
               Our Approach
             </h2>
             <p className="text-body text-gray-600 mb-8 leading-relaxed">
-              We understand the construction industry's unique challenges and
+              We understand commercial construction's unique challenges and
               opportunities. Our approach combines industry expertise with
-              cutting-edge digital strategies to deliver measurable results.
+              proven construction methods to deliver exceptional results.
             </p>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
@@ -290,10 +289,10 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-black mb-2">
-                    Discovery & Strategy
+                    Planning & Design
                   </h3>
                   <p className="text-gray-600">
-                    Deep dive into your business goals and target audience
+                    Deep dive into your project requirements and site analysis
                   </p>
                 </div>
               </div>
@@ -303,10 +302,10 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-black mb-2">
-                    Design & Development
+                    Construction & Build
                   </h3>
                   <p className="text-gray-600">
-                    Create compelling digital experiences that convert
+                    Expert construction with quality materials and craftsmanship
                   </p>
                 </div>
               </div>
@@ -316,10 +315,10 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-black mb-2">
-                    Launch & Optimize
+                    Completion & Handover
                   </h3>
                   <p className="text-gray-600">
-                    Continuous improvement based on data and results
+                    Final inspections and project delivery on time and budget
                   </p>
                 </div>
               </div>
@@ -368,8 +367,8 @@ const Index = () => {
               <span className="text-gradient">Amazing Together</span>
             </h2>
             <p className="text-body text-gray-300 mb-12 leading-relaxed">
-              Ready to transform your construction business? Get in touch with
-              our team of experts.
+              Ready to start your commercial construction project? Get in touch
+              with our team of construction experts.
             </p>
 
             <div className="space-y-6">
@@ -467,10 +466,10 @@ const Index = () => {
             <div>
               <h4 className="text-black font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-600">
-                <li>Web Development</li>
-                <li>Digital Marketing</li>
-                <li>Brand Development</li>
-                <li>Strategy Consulting</li>
+                <li>Commercial Construction</li>
+                <li>Warehouse Development</li>
+                <li>Retail Construction</li>
+                <li>Project Management</li>
               </ul>
             </div>
 
