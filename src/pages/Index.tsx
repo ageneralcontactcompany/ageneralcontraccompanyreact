@@ -446,7 +446,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="dark-section border-t border-gray-800">
+      <footer className="bg-white border-t border-gray-200">
         <div className="container mx-auto px-4 lg:px-8 py-12">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
@@ -454,19 +454,19 @@ const Index = () => {
                 <div className="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center">
                   <Building2 className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-2xl font-display font-bold text-white">
+                <span className="text-2xl font-display font-bold text-black">
                   A General Construction Company
                 </span>
               </div>
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray-600 mb-6">
                 Building long lasting relationships through exceptional
                 commercial construction projects.
               </p>
             </div>
 
             <div>
-              <h4 className="text-white font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
+              <h4 className="text-black font-semibold mb-4">Services</h4>
+              <ul className="space-y-2 text-gray-600">
                 <li>Web Development</li>
                 <li>Digital Marketing</li>
                 <li>Brand Development</li>
@@ -475,8 +475,8 @@ const Index = () => {
             </div>
 
             <div>
-              <h4 className="text-white font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
+              <h4 className="text-black font-semibold mb-4">Company</h4>
+              <ul className="space-y-2 text-gray-600">
                 <li>About Us</li>
                 <li>Our Work</li>
                 <li>Careers</li>
@@ -485,8 +485,8 @@ const Index = () => {
             </div>
 
             <div>
-              <h4 className="text-white font-semibold mb-4">Connect</h4>
-              <ul className="space-y-2 text-gray-400">
+              <h4 className="text-black font-semibold mb-4">Connect</h4>
+              <ul className="space-y-2 text-gray-600">
                 <li>LinkedIn</li>
                 <li>Twitter</li>
                 <li>Instagram</li>
@@ -495,7 +495,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+          <div className="border-t border-gray-200 mt-12 pt-8 text-center text-gray-600">
             <p>
               &copy; 2024 A General Construction Company. All rights reserved.
             </p>
