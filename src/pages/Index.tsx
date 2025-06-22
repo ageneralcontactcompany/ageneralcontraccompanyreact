@@ -31,37 +31,21 @@ const Index = () => {
               </span>
             </div>
 
-            <nav className="hidden lg:flex items-center space-x-12">
-              <a
-                href="#services"
-                className="text-black hover:text-brand-primary transition-colors font-medium"
-              >
-                Services
-              </a>
-              <a
-                href="#projects"
-                className="text-black hover:text-brand-primary transition-colors font-medium"
-              >
-                Projects
-              </a>
-              <a
-                href="#approach"
-                className="text-black hover:text-brand-primary transition-colors font-medium"
-              >
-                Approach
-              </a>
-              <a
-                href="#contact"
-                className="text-black hover:text-brand-primary transition-colors font-medium"
-              >
-                Contact
-              </a>
-            </nav>
-
             <div className="flex items-center space-x-4">
-              <Button className="brand-button hidden lg:block">
-                Get In Touch
-              </Button>
+              <nav className="hidden lg:flex items-center space-x-8 ml-auto">
+                <a
+                  href="#services"
+                  className="text-black hover:text-brand-primary transition-colors font-medium text-sm"
+                >
+                  Services
+                </a>
+                <a
+                  href="#projects"
+                  className="text-black hover:text-brand-primary transition-colors font-medium text-sm"
+                >
+                  Projects
+                </a>
+              </nav>
               <Button
                 variant="outline"
                 size="icon"
@@ -95,8 +79,13 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Get In Touch Button - Middle Bottom */}
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2">
+          <Button className="brand-button">Get In Touch</Button>
+        </div>
+
         {/* Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <div className="flex flex-col items-center text-gray-500">
             <span className="text-sm mb-2">Scroll</span>
             <ChevronDown className="w-5 h-5 animate-scroll-indicator" />
