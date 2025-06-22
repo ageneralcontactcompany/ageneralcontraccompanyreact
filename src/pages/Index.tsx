@@ -27,7 +27,7 @@ const Index = () => {
                 <Building2 className="w-6 h-6 text-white" />
               </div>
               <span className="text-2xl font-display font-bold text-black">
-                ProBuild
+                A General Construction Company
               </span>
             </div>
 
@@ -75,24 +75,21 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="min-h-screen dark-section flex flex-col justify-center relative overflow-hidden">
-        {/* Background Video Placeholder */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-dark via-gray-900 to-black">
-          <div className="absolute inset-0 bg-black/20"></div>
-        </div>
-
+      <section className="min-h-screen bg-white flex flex-col justify-center relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-5xl">
             <div className="animate-fade-in">
-              <h1 className="text-hero lg:text-display-lg font-medium text-white mb-8 leading-tight">
-                Construction
+              <h1 className="text-hero lg:text-display-lg font-medium text-black mb-8 leading-tight">
+                Commercial Projects
                 <br />
-                <span className="text-gradient">Digital Marketing</span>
+                <span className="text-gradient">
+                  Let's Get Your Project Moving
+                </span>
               </h1>
-              <p className="text-body text-gray-300 max-w-2xl mb-12 leading-relaxed">
-                Transform your construction business with cutting-edge digital
-                solutions that drive results and build lasting client
-                relationships.
+              <p className="text-body text-gray-600 max-w-2xl mb-12 leading-relaxed">
+                Let's get your project moving and build long lasting
+                relationships. We deliver exceptional construction solutions for
+                commercial and business projects of all sizes.
               </p>
             </div>
           </div>
@@ -100,7 +97,7 @@ const Index = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
-          <div className="flex flex-col items-center text-white/70">
+          <div className="flex flex-col items-center text-gray-500">
             <span className="text-sm mb-2">Scroll</span>
             <ChevronDown className="w-5 h-5 animate-scroll-indicator" />
           </div>
@@ -469,11 +466,12 @@ const Index = () => {
                   <Building2 className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-2xl font-display font-bold text-white">
-                  ProBuild
+                  A General Construction Company
                 </span>
               </div>
               <p className="text-gray-400 mb-6">
-                Building tomorrow's infrastructure with today's innovation.
+                Building long lasting relationships through exceptional
+                commercial construction projects.
               </p>
             </div>
 
@@ -509,7 +507,9 @@ const Index = () => {
           </div>
 
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 ProBuild. All rights reserved.</p>
+            <p>
+              &copy; 2024 A General Construction Company. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
