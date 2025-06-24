@@ -3,54 +3,82 @@ import { CheckCircle2, Award } from "lucide-react";
 
 const TransformSection: React.FC = () => {
   return (
-    <section className="section-container">
-      <div className="grid lg:grid-cols-2 gap-16 items-center">
-        <div className="animate-slide-in-left">
-          <h2 className="text-section lg:text-display-md font-semibold text-black mb-8 leading-tight">
-            Transform Your Space
+    <section className="section-container" aria-labelledby="transform-heading">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="animate-slide-in-left px-4 lg:px-0">
+          <h2
+            id="transform-heading"
+            className="text-section lg:text-display-md font-semibold text-black mb-8 leading-tight"
+          >
+            Build Your Vision Into Reality
             <br />
-            With Our Expertise
+            <span className="text-brand-primary">
+              With Expert Craftsmanship
+            </span>
           </h2>
           <p className="text-body text-gray-600 mb-8 leading-relaxed">
-            Whether you're a business owner looking to upgrade your commercial
-            space or a homeowner planning a renovation, we provide seamless
-            construction solutions tailored to your needs.
+            Ready to elevate your space? Our award-winning team delivers
+            exceptional results that exceed expectations. From concept to
+            completion, we make your construction dreams a reality with
+            precision, quality, and care.
           </p>
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <CheckCircle2 className="w-6 h-6 text-brand-primary flex-shrink-0" />
+          <ul className="space-y-4" role="list">
+            <li className="flex items-center space-x-3">
+              <CheckCircle2
+                className="w-6 h-6 text-brand-primary flex-shrink-0"
+                aria-hidden="true"
+              />
               <span className="text-body text-gray-700">
                 Commercial construction & remodeling
               </span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <CheckCircle2 className="w-6 h-6 text-brand-primary flex-shrink-0" />
+            </li>
+            <li className="flex items-center space-x-3">
+              <CheckCircle2
+                className="w-6 h-6 text-brand-primary flex-shrink-0"
+                aria-hidden="true"
+              />
               <span className="text-body text-gray-700">
                 Residential renovations & additions
               </span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <CheckCircle2 className="w-6 h-6 text-brand-primary flex-shrink-0" />
+            </li>
+            <li className="flex items-center space-x-3">
+              <CheckCircle2
+                className="w-6 h-6 text-brand-primary flex-shrink-0"
+                aria-hidden="true"
+              />
               <span className="text-body text-gray-700">
                 Easy to work with - focused on your vision
               </span>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
-        <div className="relative">
+        <div className="relative px-4 lg:px-0">
           <img
-            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-            alt="Construction site with modern architecture"
-            className="rounded-3xl shadow-2xl w-full"
+            src="https://images.pexels.com/photos/18283441/pexels-photo-18283441.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Bustling modern construction site with workers and equipment actively engaged in building tasks"
+            className="rounded-3xl shadow-2xl w-full transition-transform duration-300 hover:scale-105 focus:scale-105"
+            loading="lazy"
+            tabIndex={0}
           />
-          <div className="absolute -bottom-8 -left-8 bg-white rounded-2xl p-6 shadow-xl">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center">
-                <Award className="w-6 h-6 text-brand-primary" />
+          <div
+            className="absolute -bottom-4 -left-4 lg:-bottom-8 lg:-left-8 bg-white rounded-2xl p-4 lg:p-6 shadow-xl"
+            role="complementary"
+            aria-label="Company statistics"
+          >
+            <div className="flex items-center space-x-3 lg:space-x-4">
+              <div
+                className="w-10 h-10 lg:w-12 lg:h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center"
+                aria-hidden="true"
+              >
+                <Award className="w-5 h-5 lg:w-6 lg:h-6 text-brand-primary" />
               </div>
               <div>
-                <div className="text-2xl font-bold text-black">10+</div>
-                <div className="text-sm text-gray-600">Years Experience</div>
+                <div className="text-xl lg:text-2xl font-bold text-black">
+                  10+
+                </div>
+                <div className="text-xs lg:text-sm text-gray-600">
+                  Years Experience
+                </div>
               </div>
             </div>
           </div>
