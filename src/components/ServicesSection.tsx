@@ -6,31 +6,31 @@ const ServicesSection: React.FC = () => {
       number: "01",
       title: "Commercial Construction",
       description:
-        "From office build-outs to retail spaces, we deliver quality commercial construction with minimal disruption to your business.",
+        "Transform your business space with cutting-edge commercial construction. From modern office build-outs to stunning retail environments, we create spaces that drive success and impress your clients.",
       image:
-        "https://images.pexels.com/photos/7077970/pexels-photo-7077970.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=800",
       imageAlt:
-        "Modern multistory commercial building facade with geometric design against blue sky",
+        "Low-angle view of a modern glass skyscraper against clear sky showcasing contemporary commercial architecture",
     },
     {
       number: "02",
       title: "Residential Renovations",
       description:
-        "Transform your home with our residential construction services, including kitchen remodels, bathroom upgrades, and home additions.",
+        "Bring your dream home to life with our premium residential services. Luxurious kitchen remodels, spa-like bathrooms, and stunning home additions that increase your property value.",
       image:
-        "https://images.pexels.com/photos/31238723/pexels-photo-31238723.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/8134772/pexels-photo-8134772.jpeg?auto=compress&cs=tinysrgb&w=800",
       imageAlt:
-        "Stylish modern kitchen interior featuring wooden cabinetry and contemporary appliances",
+        "Bright, spacious modern kitchen featuring minimalist design and contemporary appliances",
     },
     {
       number: "03",
       title: "Project Management",
       description:
-        "Our experienced team manages your project from start to finish, ensuring quality results on time and within budget.",
+        "Experience stress-free construction with our expert project management. We handle every detail from permits to final walkthrough, delivering exceptional results on time and within budget.",
       image:
-        "https://images.pexels.com/photos/8469986/pexels-photo-8469986.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/6285133/pexels-photo-6285133.jpeg?auto=compress&cs=tinysrgb&w=800",
       imageAlt:
-        "Three professional architects in hard hats reviewing construction blueprints in bright white room",
+        "Two professional engineers discussing detailed construction blueprints in a modern office setting",
     },
   ];
 

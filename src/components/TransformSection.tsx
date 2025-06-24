@@ -10,14 +10,17 @@ const TransformSection: React.FC = () => {
             id="transform-heading"
             className="text-section lg:text-display-md font-semibold text-black mb-8 leading-tight"
           >
-            Transform Your Space
+            Build Your Vision Into Reality
             <br />
-            With Our Expertise
+            <span className="text-brand-primary">
+              With Expert Craftsmanship
+            </span>
           </h2>
           <p className="text-body text-gray-600 mb-8 leading-relaxed">
-            Whether you're a business owner looking to upgrade your commercial
-            space or a homeowner planning a renovation, we provide seamless
-            construction solutions tailored to your needs.
+            Ready to elevate your space? Our award-winning team delivers
+            exceptional results that exceed expectations. From concept to
+            completion, we make your construction dreams a reality with
+            precision, quality, and care.
           </p>
           <ul className="space-y-4" role="list">
             <li className="flex items-center space-x-3">
@@ -51,8 +54,8 @@ const TransformSection: React.FC = () => {
         </div>
         <div className="relative px-4 lg:px-0">
           <img
-            src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Construction workers leveling fresh cement on a sunny day at an outdoor construction site"
+            src="https://images.pexels.com/photos/18283441/pexels-photo-18283441.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Bustling modern construction site with workers and equipment actively engaged in building tasks"
             className="rounded-3xl shadow-2xl w-full transition-transform duration-300 hover:scale-105 focus:scale-105"
             loading="lazy"
             tabIndex={0}
