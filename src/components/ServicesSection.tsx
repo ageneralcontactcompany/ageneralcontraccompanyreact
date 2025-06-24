@@ -6,7 +6,7 @@ const ServicesSection: React.FC = () => {
       number: "01",
       title: "Commercial Construction",
       description:
-        "Transform your business space with cutting-edge commercial construction. From modern office build-outs to stunning retail environments, we create spaces that drive success and impress your clients.",
+        "From office build-outs to retail spaces, we deliver quality commercial construction with minimal disruption to your business.",
       image:
         "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=800",
       imageAlt:
@@ -18,7 +18,7 @@ const ServicesSection: React.FC = () => {
       description:
         "Bring your dream home to life with our premium residential services. Luxurious kitchen remodels, spa-like bathrooms, and stunning home additions that increase your property value.",
       image:
-        "https://images.pexels.com/photos/8134772/pexels-photo-8134772.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       imageAlt:
         "Bright, spacious modern kitchen featuring minimalist design and contemporary appliances",
     },
