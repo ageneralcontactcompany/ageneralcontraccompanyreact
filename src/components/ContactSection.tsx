@@ -29,14 +29,15 @@ const ContactSection: React.FC<ContactSectionProps> = ({
             id="contact-heading"
             className="text-section lg:text-display-md font-semibold text-white mb-8"
           >
-            Ready to Start
+            Ready to Build Something
             <br />
-            <span className="text-gradient">Your Project?</span>
+            <span className="text-gradient">Extraordinary?</span>
           </h2>
           <p className="text-body text-gray-300 mb-12 leading-relaxed">
-            Contact us today to discuss your commercial or residential
-            construction needs. We're here to make the process easy and
-            stress-free.
+            Get your FREE consultation today! Whether it's a major commercial
+            project or your dream home renovation, our expert team is ready to
+            exceed your expectations. Let's discuss how we can bring your vision
+            to life.
           </p>
 
           <div className="space-y-6" role="list">
