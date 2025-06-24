@@ -1,83 +1,19 @@
-import React, { useState } from "react";
+// index.tsx
+import React from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import {
   Building2,
   Menu,
   ChevronDown,
-  ArrowRight,
   Phone,
   Mail,
   MapPin,
   Award,
   CheckCircle2,
+  ArrowRight,
 } from "lucide-react";
 
-const ContactForm = () => {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simulate successful submission (replace with your real submit logic)
-    setSubmitted(true);
-  };
-
-  if (submitted) {
-    return (
-      <div className="flex flex-col items-center justify-center p-8 bg-green-50 rounded-xl">
-        <CheckCircle2 className="w-12 h-12 text-green-600 mb-4" />
-        <h4 className="text-lg font-semibold text-green-700 mb-2">
-          Thank you!
-        </h4>
-        <p className="text-green-700 text-center">
-          Your message has been sent successfully. We will contact you soon.
-        </p>
-      </div>
-    );
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-2 gap-4">
-        <Input
-          name="firstName"
-          placeholder="First Name"
-          required
-          className="bg-gray-50 border-gray-200 rounded-xl py-4"
-        />
-        <Input
-          name="lastName"
-          placeholder="Last Name"
-          required
-          className="bg-gray-50 border-gray-200 rounded-xl py-4"
-        />
-      </div>
-      <Input
-        name="email"
-        type="email"
-        placeholder="Email Address"
-        required
-        className="bg-gray-50 border-gray-200 rounded-xl py-4"
-      />
-      <Input
-        name="company"
-        placeholder="Company Name"
-        className="bg-gray-50 border-gray-200 rounded-xl py-4"
-      />
-      <textarea
-        name="message"
-        placeholder="Tell us about your project"
-        rows={4}
-        required
-        className="w-full bg-gray-50 border border-gray-200 rounded-xl p-4 resize-none focus:outline-none focus:ring-2 focus:ring-brand-primary"
-      />
-      <Button type="submit" className="w-full brand-button text-lg py-4">
-        Send Message
-        <ArrowRight className="ml-2 w-5 h-5" />
-      </Button>
-    </form>
-  );
-};
+import ContactForm from "@/components/ui/ContactForm"; // adjust path if needed
 
 const Index = () => {
   return (
@@ -424,7 +360,6 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contact" className="dark-section section-container">
         <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Info on Left */}
           <div>
             <h2 className="text-section lg:text-display-md font-semibold text-white mb-8">
               Let's Build Something
@@ -442,13 +377,8 @@ const Index = () => {
                   <Phone className="w-6 h-6 text-brand-primary" />
                 </div>
                 <div>
-                  <a
-                    href="tel:2407399223"
-                    className="text-white font-semibold hover:underline"
-                  >
-                    Diego Hagans
-                  </a>
-                  <div className="text-gray-400">240-739-9223</div>
+                  <div className="text-white font-semibold">240-739-9223</div>
+                  <div className="text-gray-400">Call Diego Hagans</div>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -456,12 +386,9 @@ const Index = () => {
                   <Mail className="w-6 h-6 text-brand-primary" />
                 </div>
                 <div>
-                  <a
-                    href="mailto:agcontractservice@gmail.com"
-                    className="text-white font-semibold hover:underline"
-                  >
+                  <div className="text-white font-semibold">
                     agcontractservice@gmail.com
-                  </a>
+                  </div>
                   <div className="text-gray-400">Send us an email</div>
                 </div>
               </div>
@@ -479,11 +406,8 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Contact Form on Right */}
-          <div className="minimal-card">
-            <h3 className="text-2xl font-semibold text-black mb-6">
-              Start Your Project
-            </h3>
+          {/* Contact Form Component */}
+          <div className="minimal-card bg-white p-8 rounded-xl shadow-lg">
             <ContactForm />
           </div>
         </div>
@@ -519,30 +443,39 @@ const Index = () => {
             </div>
 
             <div>
-              <h4 className="text-black font-semibold mb-4">Company</h4>
+              <h4 className="text-black font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-600">
-                <li>About Us</li>
-                <li>Our Work</li>
-                <li>Careers</li>
-                <li>Contact</li>
+                <li>Phone: 240-739-9223</li>
+                <li>Email: agcontractservice@gmail.com</li>
+                <li>Address: 123 Construction Ave</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-black font-semibold mb-4">Connect</h4>
+              <h4 className="text-black font-semibold mb-4">Follow Us</h4>
               <ul className="space-y-2 text-gray-600">
-                <li>LinkedIn</li>
-                <li>Twitter</li>
-                <li>Instagram</li>
-                <li>Facebook</li>
+                <li>
+                  <a href="#" className="hover:text-brand-primary">
+                    Facebook
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-brand-primary">
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-brand-primary">
+                    LinkedIn
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-gray-200 mt-12 pt-8 text-center text-gray-600">
-            <p>
-              &copy; 2024 A General Construction Company. All rights reserved.
-            </p>
+          <div className="text-center text-gray-500 text-sm mt-12">
+            &copy; {new Date().getFullYear()} A General Construction Company.
+            All rights reserved.
           </div>
         </div>
       </footer>
