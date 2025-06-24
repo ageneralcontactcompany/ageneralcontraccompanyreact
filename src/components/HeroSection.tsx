@@ -21,16 +21,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ phoneNumber }) => {
               id="hero-heading"
               className="text-hero lg:text-display-lg font-medium text-black mb-8 leading-tight"
             >
-              Commercial & Residential
+              Premium Construction Solutions
               <br />
               <span className="text-gradient text-4xl lg:text-5xl">
-                Your Trusted Construction Partner
+                That Transform Spaces & Lives
               </span>
             </h1>
             <p className="text-body text-gray-600 max-w-2xl mb-12 leading-relaxed">
-              We make construction easy for businesses and homeowners alike.
-              With our expertise and customer-focused approach, you're in the
-              right place to bring your project to life.
+              From stunning commercial spaces to dream home renovations, we
+              deliver exceptional results that exceed expectations. Join 90+
+              satisfied clients who chose AGCC for quality, reliability, and
+              outstanding craftsmanship.
             </p>
           </div>
         </div>
