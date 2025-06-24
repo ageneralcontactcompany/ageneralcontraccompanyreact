@@ -18,10 +18,17 @@ const ContactSection: React.FC<ContactSectionProps> = ({
   googleMapsLink,
 }) => {
   return (
-    <section id="contact" className="dark-section section-container">
-      <div className="grid lg:grid-cols-2 gap-16">
-        <div>
-          <h2 className="text-section lg:text-display-md font-semibold text-white mb-8">
+    <section
+      id="contact"
+      className="dark-section section-container"
+      aria-labelledby="contact-heading"
+    >
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
+        <div className="px-4 lg:px-0">
+          <h2
+            id="contact-heading"
+            className="text-section lg:text-display-md font-semibold text-white mb-8"
+          >
             Ready to Start
             <br />
             <span className="text-gradient">Your Project?</span>
@@ -32,37 +39,48 @@ const ContactSection: React.FC<ContactSectionProps> = ({
             stress-free.
           </p>
 
-          <div className="space-y-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center">
+          <div className="space-y-6" role="list">
+            <div className="flex items-center space-x-4" role="listitem">
+              <div
+                className="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center flex-shrink-0"
+                aria-hidden="true"
+              >
                 <Phone className="w-6 h-6 text-brand-primary" />
               </div>
               <div>
                 <a
                   href={`tel:${phoneNumber}`}
-                  className="text-white font-semibold hover:underline"
+                  className="text-white font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded"
+                  aria-label={`Call Diego Hagans at ${formattedPhoneNumber}`}
                 >
                   {formattedPhoneNumber}
                 </a>
                 <div className="text-gray-400">Call Diego Hagans</div>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center">
+            <div className="flex items-center space-x-4" role="listitem">
+              <div
+                className="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center flex-shrink-0"
+                aria-hidden="true"
+              >
                 <Mail className="w-6 h-6 text-brand-primary" />
               </div>
               <div>
                 <a
                   href={`mailto:${email}`}
-                  className="text-white font-semibold hover:underline"
+                  className="text-white font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded"
+                  aria-label={`Send email to ${email}`}
                 >
                   {email}
                 </a>
                 <div className="text-gray-400">Send us an email</div>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center">
+            <div className="flex items-center space-x-4" role="listitem">
+              <div
+                className="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center flex-shrink-0"
+                aria-hidden="true"
+              >
                 <MapPin className="w-6 h-6 text-brand-primary" />
               </div>
               <div>
@@ -70,7 +88,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   href={googleMapsLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white font-semibold hover:underline"
+                  className="text-white font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded"
+                  aria-label={`View our location at ${address} on Google Maps`}
                 >
                   {address}
                 </a>
@@ -79,7 +98,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                     href={googleMapsLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline"
+                    className="hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded"
                   >
                     View on Google Maps
                   </a>
@@ -90,7 +109,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
         </div>
 
         {/* Contact Form Component */}
-        <div className="minimal-card bg-white p-8 rounded-xl shadow-lg">
+        <div className="minimal-card bg-white p-6 lg:p-8 rounded-xl shadow-lg mx-4 lg:mx-0">
           <ContactForm />
         </div>
       </div>
