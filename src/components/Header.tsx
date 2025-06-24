@@ -1,5 +1,5 @@
 import React from "react";
-import { Building2, Menu, Phone } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface HeaderProps {
