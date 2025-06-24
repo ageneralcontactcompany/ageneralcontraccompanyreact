@@ -1,4 +1,3 @@
-// index.tsx
 import React from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,12 +9,18 @@ import {
   MapPin,
   Award,
   CheckCircle2,
-  ArrowRight,
 } from "lucide-react";
 
-import ContactForm from "@/components/ui/ContactForm"; // adjust path if needed
+import ContactForm from "@/components/ui/ContactForm";
 
 const Index = () => {
+  // Contact information constants
+  const phoneNumber = "2407399223"; // No dashes for tel: link
+  const formattedPhoneNumber = "240-739-9223"; // Formatted for display
+  const email = "agcontractservice@gmail.com";
+  const address = "5159 Pooks Hill Rd, Bethesda, MD 20814";
+  const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+
   return (
     <div className="min-h-screen">
       {/* Fixed Header */}
@@ -45,6 +50,12 @@ const Index = () => {
                 >
                   Projects
                 </a>
+                <a
+                  href={`tel:${phoneNumber}`}
+                  className="flex items-center text-black hover:text-brand-primary transition-colors font-medium text-sm"
+                >
+                  <Phone className="w-4 h-4 mr-1" /> Call Us
+                </a>
               </nav>
               <Button
                 variant="outline"
@@ -64,24 +75,28 @@ const Index = () => {
           <div className="max-w-5xl">
             <div className="animate-fade-in">
               <h1 className="text-hero lg:text-display-lg font-medium text-black mb-8 leading-tight">
-                Commercial Projects
+                Commercial & Residential
                 <br />
                 <span className="text-gradient">
-                  Let's Get Your Project Moving
+                  Your Trusted Construction Partner
                 </span>
               </h1>
               <p className="text-body text-gray-600 max-w-2xl mb-12 leading-relaxed">
-                Let's get your project moving and build long lasting
-                relationships. We deliver exceptional construction solutions for
-                commercial and business projects of all sizes.
+                We make construction easy for businesses and homeowners alike. 
+                With our expertise and customer-focused approach, you're in the 
+                right place to bring your project to life.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Get In Touch Button - Middle Bottom */}
+        {/* Get In Touch Button - Now clickable to call */}
         <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2">
-          <Button className="brand-button">Get In Touch</Button>
+          <a href={`tel:${phoneNumber}`} className="no-underline">
+            <Button className="brand-button flex items-center gap-2">
+              <Phone className="w-5 h-5" /> Get In Touch
+            </Button>
+          </a>
         </div>
 
         {/* Scroll Indicator */}
@@ -98,32 +113,32 @@ const Index = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-slide-in-left">
             <h2 className="text-section lg:text-display-md font-semibold text-black mb-8 leading-tight">
-              Transform your
+              Transform Your Space
               <br />
-              commercial project
+              With Our Expertise
             </h2>
             <p className="text-body text-gray-600 mb-8 leading-relaxed">
-              We help businesses build exceptional commercial spaces that
-              showcase their brand, attract customers, and drive business growth
-              through expert construction and project management.
+              Whether you're a business owner looking to upgrade your commercial 
+              space or a homeowner planning a renovation, we provide seamless 
+              construction solutions tailored to your needs.
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <CheckCircle2 className="w-6 h-6 text-brand-primary flex-shrink-0" />
                 <span className="text-body text-gray-700">
-                  Commercial building construction
+                  Commercial construction & remodeling
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle2 className="w-6 h-6 text-brand-primary flex-shrink-0" />
                 <span className="text-body text-gray-700">
-                  Office space design & build
+                  Residential renovations & additions
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle2 className="w-6 h-6 text-brand-primary flex-shrink-0" />
                 <span className="text-body text-gray-700">
-                  Residential & warehouse construction
+                  Easy to work with - focused on your vision
                 </span>
               </div>
             </div>
@@ -140,7 +155,7 @@ const Index = () => {
                   <Award className="w-6 h-6 text-brand-primary" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-black">25+</div>
+                  <div className="text-2xl font-bold text-black">10+</div>
                   <div className="text-sm text-gray-600">Years Experience</div>
                 </div>
               </div>
@@ -153,11 +168,10 @@ const Index = () => {
       <section id="services" className="bg-gray-50 section-container">
         <div className="text-center mb-20">
           <h2 className="text-section lg:text-display-md font-semibold text-black mb-6">
-            What We Do
+            Our Services
           </h2>
           <p className="text-body text-gray-600 max-w-3xl mx-auto">
-            Comprehensive construction solutions for commercial and business
-            projects of all sizes
+            Comprehensive construction solutions for both commercial and residential projects
           </p>
         </div>
 
@@ -167,39 +181,23 @@ const Index = () => {
               number: "01",
               title: "Commercial Construction",
               description:
-                "Office buildings, retail spaces, and mixed-use developments built to the highest standards with modern design and functionality.",
+                "From office build-outs to retail spaces, we deliver quality commercial construction with minimal disruption to your business.",
               image:
                 "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             },
             {
               number: "02",
-              title: "Warehouse & Industrial",
+              title: "Residential Renovations",
               description:
-                "Manufacturing facilities, distribution centers, and industrial spaces designed for efficiency and operational excellence.",
-              image:
-                "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            },
-            {
-              number: "03",
-              title: "Residential Construction",
-              description:
-                "Custom homes, residential developments, and housing projects that provide quality living spaces for families and communities.",
+                "Transform your home with our residential construction services, including kitchen remodels, bathroom upgrades, and home additions.",
               image:
                 "https://images.pexels.com/photos/7475555/pexels-photo-7475555.jpeg?auto=compress&cs=tinysrgb&w=800",
             },
             {
-              number: "04",
-              title: "Office Development",
-              description:
-                "Modern office spaces and corporate headquarters that inspire productivity and reflect your company's values.",
-              image:
-                "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            },
-            {
-              number: "05",
+              number: "03",
               title: "Project Management",
               description:
-                "End-to-end construction management ensuring your project is completed on time, within budget, and to specification.",
+                "Our experienced team manages your project from start to finish, ensuring quality results on time and within budget.",
               image:
                 "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             },
@@ -231,108 +229,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Client Showcase */}
-      <section className="section-container">
-        <div className="text-center mb-16">
-          <h2 className="text-section lg:text-display-md font-semibold text-black mb-6">
-            Our Clients
-          </h2>
-          <p className="text-body text-gray-600 max-w-3xl mx-auto">
-            Trusted by leading construction companies across the country
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 opacity-60">
-          {[
-            "Public Stores",
-            "ACME Construction",
-            "BuildPro",
-            "SteelWorks",
-            "ModernBuild",
-            "ConcretePlus",
-          ].map((client, index) => (
-            <div
-              key={index}
-              className="minimal-card text-center hover:opacity-100 transition-opacity duration-300"
-            >
-              <div className="text-lg font-semibold text-gray-700">
-                {client}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Approach Section */}
-      <section id="approach" className="bg-gray-50 section-container">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              alt="Construction planning meeting"
-              className="rounded-3xl shadow-2xl w-full"
-            />
-          </div>
-          <div>
-            <h2 className="text-section lg:text-display-md font-semibold text-black mb-8">
-              Our Approach
-            </h2>
-            <p className="text-body text-gray-600 mb-8 leading-relaxed">
-              We understand commercial construction's unique challenges and
-              opportunities. Our approach combines industry expertise with
-              proven construction methods to deliver exceptional results.
-            </p>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-sm">1</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-black mb-2">
-                    Planning & Design
-                  </h3>
-                  <p className="text-gray-600">
-                    Deep dive into your project requirements and site analysis
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-sm">2</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-black mb-2">
-                    Construction & Build
-                  </h3>
-                  <p className="text-gray-600">
-                    Expert construction with quality materials and craftsmanship
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-sm">3</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-black mb-2">
-                    Completion & Handover
-                  </h3>
-                  <p className="text-gray-600">
-                    Final inspections and project delivery on time and budget
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Statistics */}
       <section className="section-container">
         <div className="grid md:grid-cols-3 gap-16 text-center">
           <div>
             <div className="text-6xl lg:text-8xl font-bold text-brand-primary mb-4">
-              132
+              91
             </div>
             <div className="text-gray-600 font-medium tracking-widest uppercase">
               Projects
@@ -340,15 +242,15 @@ const Index = () => {
           </div>
           <div>
             <div className="text-6xl lg:text-8xl font-bold text-brand-primary mb-4">
-              9
+              11
             </div>
             <div className="text-gray-600 font-medium tracking-widest uppercase">
-              Awards
+              States
             </div>
           </div>
           <div>
             <div className="text-6xl lg:text-8xl font-bold text-brand-primary mb-4">
-              25
+              10
             </div>
             <div className="text-gray-600 font-medium tracking-widest uppercase">
               Years
@@ -362,13 +264,13 @@ const Index = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           <div>
             <h2 className="text-section lg:text-display-md font-semibold text-white mb-8">
-              Let's Build Something
+              Ready to Start
               <br />
-              <span className="text-gradient">Amazing Together</span>
+              <span className="text-gradient">Your Project?</span>
             </h2>
             <p className="text-body text-gray-300 mb-12 leading-relaxed">
-              Ready to start your commercial construction project? Get in touch
-              with our team of construction experts.
+              Contact us today to discuss your commercial or residential construction needs. 
+              We're here to make the process easy and stress-free.
             </p>
 
             <div className="space-y-6">
@@ -377,7 +279,9 @@ const Index = () => {
                   <Phone className="w-6 h-6 text-brand-primary" />
                 </div>
                 <div>
-                  <div className="text-white font-semibold">240-739-9223</div>
+                  <a href={`tel:${phoneNumber}`} className="text-white font-semibold hover:underline">
+                    {formattedPhoneNumber}
+                  </a>
                   <div className="text-gray-400">Call Diego Hagans</div>
                 </div>
               </div>
@@ -386,9 +290,9 @@ const Index = () => {
                   <Mail className="w-6 h-6 text-brand-primary" />
                 </div>
                 <div>
-                  <div className="text-white font-semibold">
-                    agcontractservice@gmail.com
-                  </div>
+                  <a href={`mailto:${email}`} className="text-white font-semibold hover:underline">
+                    {email}
+                  </a>
                   <div className="text-gray-400">Send us an email</div>
                 </div>
               </div>
@@ -397,10 +301,14 @@ const Index = () => {
                   <MapPin className="w-6 h-6 text-brand-primary" />
                 </div>
                 <div>
-                  <div className="text-white font-semibold">
-                    123 Construction Ave
+                  <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" className="text-white font-semibold hover:underline">
+                    {address}
+                  </a>
+                  <div className="text-gray-400">
+                    <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                      View on Google Maps
+                    </a>
                   </div>
-                  <div className="text-gray-400">Visit our office</div>
                 </div>
               </div>
             </div>
@@ -427,8 +335,7 @@ const Index = () => {
                 </span>
               </div>
               <p className="text-gray-600 mb-6">
-                Building long lasting relationships through exceptional
-                commercial construction projects.
+                Making construction easy for businesses and homeowners throughout the region.
               </p>
             </div>
 
@@ -436,8 +343,7 @@ const Index = () => {
               <h4 className="text-black font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-600">
                 <li>Commercial Construction</li>
-                <li>Warehouse Development</li>
-                <li>Residential Construction</li>
+                <li>Residential Renovations</li>
                 <li>Project Management</li>
               </ul>
             </div>
@@ -445,28 +351,19 @@ const Index = () => {
             <div>
               <h4 className="text-black font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-600">
-                <li>Phone: 240-739-9223</li>
-                <li>Email: agcontractservice@gmail.com</li>
-                <li>Address: 123 Construction Ave</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-black font-semibold mb-4">Follow Us</h4>
-              <ul className="space-y-2 text-gray-600">
                 <li>
-                  <a href="#" className="hover:text-brand-primary">
-                    Facebook
+                  <a href={`tel:${phoneNumber}`} className="hover:text-brand-primary hover:underline">
+                    Phone: {formattedPhoneNumber}
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-brand-primary">
-                    Twitter
+                  <a href={`mailto:${email}`} className="hover:text-brand-primary hover:underline">
+                    Email: {email}
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-brand-primary">
-                    LinkedIn
+                  <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary hover:underline">
+                    Address: {address}
                   </a>
                 </li>
               </ul>
