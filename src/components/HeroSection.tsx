@@ -8,11 +8,19 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ phoneNumber }) => {
   return (
-    <section className="min-h-screen bg-white flex flex-col justify-center relative overflow-hidden">
+    <section
+      id="main-content"
+      className="min-h-screen bg-white flex flex-col justify-center relative overflow-hidden pt-20"
+      role="main"
+      aria-labelledby="hero-heading"
+    >
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-5xl">
           <div className="animate-fade-in">
-            <h1 className="text-hero lg:text-display-lg font-medium text-black mb-8 leading-tight">
+            <h1
+              id="hero-heading"
+              className="text-hero lg:text-display-lg font-medium text-black mb-8 leading-tight"
+            >
               Commercial & Residential
               <br />
               <span className="text-gradient text-4xl lg:text-5xl">
@@ -29,16 +37,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({ phoneNumber }) => {
       </div>
 
       {/* Get In Touch Button - Now clickable to call */}
-      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2">
-        <a href={`tel:${phoneNumber}`} className="no-underline">
-          <Button className="brand-button flex items-center gap-2">
-            <Phone className="w-5 h-5" /> Get In Touch
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 px-4">
+        <a
+          href={`tel:${phoneNumber}`}
+          className="no-underline focus:outline-none focus:ring-2 focus:ring-brand-primary rounded-lg"
+          aria-label={`Call us at ${phoneNumber} to get in touch`}
+        >
+          <Button className="brand-button flex items-center gap-2 px-6 py-3 text-base">
+            <Phone className="w-5 h-5" aria-hidden="true" /> Get In Touch
           </Button>
         </a>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <div
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        role="presentation"
+        aria-hidden="true"
+      >
         <div className="flex flex-col items-center text-gray-500">
           <span className="text-sm mb-2">Scroll</span>
           <ChevronDown className="w-5 h-5 animate-scroll-indicator" />
