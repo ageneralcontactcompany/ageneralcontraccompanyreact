@@ -13,9 +13,9 @@ const Header: React.FC<HeaderProps> = ({ phoneNumber }) => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center">
-              <Building2 className="w-6 h-6 text-white" />
+              <span className="text-white font-bold text-sm">AGCC</span>
             </div>
-            <span className="text-2xl font-display font-bold text-black">
+            <span className="text-lg font-display font-bold text-black">
               A General Construction Company
             </span>
           </div>

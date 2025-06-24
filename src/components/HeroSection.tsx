@@ -15,7 +15,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ phoneNumber }) => {
             <h1 className="text-hero lg:text-display-lg font-medium text-black mb-8 leading-tight">
               Commercial & Residential
               <br />
-              <span className="text-gradient">
+              <span className="text-gradient text-4xl lg:text-5xl">
                 Your Trusted Construction Partner
               </span>
             </h1>
