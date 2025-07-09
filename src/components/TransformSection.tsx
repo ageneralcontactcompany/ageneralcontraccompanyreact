@@ -52,8 +52,8 @@ const TransformSection: React.FC = () => {
         </div>
         <div className="relative px-4 lg:px-0">
           <img
-            src="https://images.pexels.com/photos/8470774/pexels-photo-8470774.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Professional construction worker carefully measuring interior work, demonstrating attention to detail and craftsmanship"
+            src="https://images.pexels.com/photos/6473983/pexels-photo-6473983.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Professional paint mixing and preparation equipment in a construction workshop, showing quality materials and professional setup"
             className="rounded-3xl shadow-2xl w-full transition-transform duration-300 hover:scale-105 focus:scale-105"
             loading="lazy"
             tabIndex={0}
