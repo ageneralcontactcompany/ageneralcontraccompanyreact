@@ -15,6 +15,14 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
+  const [messages, setMessages] = useState([
+    {
+      id: 1,
+      text: "Hi there! 👋 I'm Diego from AGCC. Thanks for visiting our website! How can I help you with your construction project today?",
+      isBot: true,
+      timestamp: new Date(),
+    },
+  ]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -54,12 +62,28 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({
 
           {/* Content */}
           <div className="p-4">
-            <div className="space-y-3 mb-4">
-              <div className="bg-gray-50 rounded-lg p-3">
-                <p className="text-sm text-gray-700">
-                  Hi! How can we help you with your construction project today?
-                </p>
-              </div>
+            <div className="space-y-3 mb-4 max-h-48 overflow-y-auto">
+              {messages.map((msg) => (
+                <div
+                  key={msg.id}
+                  className={`rounded-lg p-3 ${
+                    msg.isBot
+                      ? "bg-gray-50 border-l-4 border-brand-primary"
+                      : "bg-brand-primary text-white ml-4"
+                  }`}
+                >
+                  <p
+                    className={`text-sm ${msg.isBot ? "text-gray-700" : "text-white"}`}
+                  >
+                    {msg.text}
+                  </p>
+                  {msg.isBot && (
+                    <p className="text-xs text-gray-500 mt-1">
+                      Diego • AGCC Construction
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
 
             {/* Quick Actions */}
