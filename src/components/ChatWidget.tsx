@@ -191,6 +191,26 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({
 
           {/* Content */}
           <div className="p-4">
+            {/* Business Hours Status */}
+            <div
+              className={`mb-4 p-3 rounded-lg border ${isBusinessHours() ? "bg-green-50 border-green-200" : "bg-orange-50 border-orange-200"}`}
+            >
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                <div>
+                  <p className="text-sm font-medium">
+                    {isBusinessHours()
+                      ? "🟢 We're Online"
+                      : "🟠 Currently Offline"}
+                  </p>
+                  <p className="text-xs text-gray-600">
+                    Business Hours: Mon-Fri, 9 AM - 5 PM EST
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Messages */}
             <div className="space-y-3 mb-4 max-h-48 overflow-y-auto">
               {messages.map((msg) => (
                 <div
@@ -207,13 +227,31 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({
                     {msg.text}
                   </p>
                   {msg.isBot && (
-                    <p className="text-xs text-gray-500 mt-1">
-                      Diego • AGCC Construction
-                    </p>
+                    <p className="text-xs text-gray-500 mt-1">AGCC Assistant</p>
                   )}
                 </div>
               ))}
             </div>
+
+            {/* Quick Questions */}
+            {messages.length <= 1 && (
+              <div className="mb-4">
+                <p className="text-sm font-medium mb-2 text-gray-700">
+                  Quick Questions:
+                </p>
+                <div className="space-y-1">
+                  {commonQuestions.slice(0, 3).map((q) => (
+                    <button
+                      key={q.id}
+                      onClick={() => handleQuickQuestion(q)}
+                      className="w-full text-left p-2 text-xs bg-gray-50 hover:bg-gray-100 rounded border transition-colors"
+                    >
+                      {q.text}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Quick Actions */}
             <div className="space-y-2 mb-4">
