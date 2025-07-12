@@ -50,7 +50,9 @@ const Footer: React.FC<FooterProps> = ({
               <h5 className="text-black font-semibold text-sm">Follow Us</h5>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="#"
+                  href="https://facebook.com/AGCCConstruction"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 hover:bg-brand-primary hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary"
                   aria-label="Follow us on Facebook"
                 >
