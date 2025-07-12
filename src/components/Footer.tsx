@@ -90,7 +90,9 @@ const Footer: React.FC<FooterProps> = ({
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://linkedin.com/company/AGCCConstruction"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 hover:bg-brand-primary hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary"
                   aria-label="Follow us on LinkedIn"
                 >
