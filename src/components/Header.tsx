@@ -33,10 +33,10 @@ const Header: React.FC<HeaderProps> = ({ phoneNumber }) => {
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center">
               <div
                 className="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center"
-                aria-label="AGCC Logo"
+                aria-label="AGCC - A General Construction Company"
               >
                 <span
                   className="text-white font-bold text-sm"
@@ -45,9 +45,6 @@ const Header: React.FC<HeaderProps> = ({ phoneNumber }) => {
                   AGCC
                 </span>
               </div>
-              <span className="text-lg font-display font-bold text-black">
-                A General Construction Company
-              </span>
             </div>
 
             <div className="flex items-center space-x-4">
