@@ -115,11 +115,11 @@ const Header: React.FC<HeaderProps> = ({ phoneNumber }) => {
               Services
             </a>
             <a
-              href="#projects"
+              href="#contact"
               className="block text-black hover:text-brand-primary transition-colors font-medium text-base py-2 focus:outline-none focus:ring-2 focus:ring-brand-primary rounded-md"
               onClick={closeMobileMenu}
             >
-              Projects
+              Contact
             </a>
             <a
               href={`tel:${phoneNumber}`}
