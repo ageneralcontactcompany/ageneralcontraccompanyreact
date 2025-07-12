@@ -50,7 +50,9 @@ const Footer: React.FC<FooterProps> = ({
               <h5 className="text-black font-semibold text-sm">Follow Us</h5>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="#"
+                  href="https://facebook.com/AGCCConstruction"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 hover:bg-brand-primary hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary"
                   aria-label="Follow us on Facebook"
                 >
@@ -68,7 +70,9 @@ const Footer: React.FC<FooterProps> = ({
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://instagram.com/AGCCConstruction"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 hover:bg-brand-primary hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary"
                   aria-label="Follow us on Instagram"
                 >
@@ -86,7 +90,9 @@ const Footer: React.FC<FooterProps> = ({
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://linkedin.com/company/AGCCConstruction"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 hover:bg-brand-primary hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary"
                   aria-label="Follow us on LinkedIn"
                 >
@@ -100,7 +106,9 @@ const Footer: React.FC<FooterProps> = ({
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://twitter.com/AGCCConstruction"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 hover:bg-brand-primary hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary"
                   aria-label="Follow us on Twitter"
                 >
@@ -114,7 +122,9 @@ const Footer: React.FC<FooterProps> = ({
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://youtube.com/@AGCCConstruction"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 hover:bg-brand-primary hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary"
                   aria-label="Watch us on YouTube"
                 >
@@ -128,7 +138,9 @@ const Footer: React.FC<FooterProps> = ({
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://blog.agcconstruction.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 hover:bg-brand-primary hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary"
                   aria-label="Read our blog"
                 >
@@ -142,7 +154,9 @@ const Footer: React.FC<FooterProps> = ({
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://g.page/r/AGCCConstruction/review"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 hover:bg-brand-primary hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary"
                   aria-label="Review us on Google"
                 >
@@ -159,7 +173,9 @@ const Footer: React.FC<FooterProps> = ({
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://yelp.com/biz/agcc-construction-bethesda"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 hover:bg-brand-primary hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary"
                   aria-label="Find us on Yelp"
                 >
