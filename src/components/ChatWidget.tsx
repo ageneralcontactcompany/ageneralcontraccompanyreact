@@ -1,11 +1,26 @@
-import React, { useState } from "react";
-import { MessageCircle, X, Phone, Mail, Send } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import {
+  MessageCircle,
+  X,
+  Phone,
+  Mail,
+  Send,
+  Clock,
+  Building,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface ChatWidgetProps {
   phoneNumber: string;
   formattedPhoneNumber: string;
   email: string;
+}
+
+interface Message {
+  id: number;
+  text: string;
+  isBot: boolean;
+  timestamp: Date;
 }
 
 const ChatWidget: React.FC<ChatWidgetProps> = ({
@@ -15,14 +30,105 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
-  const [messages, setMessages] = useState([
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  // Update current time every minute
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 60000);
+    return () => clearInterval(timer);
+  }, []);
+
+  // Check if currently in business hours (9 AM - 5 PM EST)
+  const isBusinessHours = () => {
+    const now = new Date();
+    const hour = now.getHours();
+    const day = now.getDay(); // 0 = Sunday, 6 = Saturday
+    return day >= 1 && day <= 5 && hour >= 9 && hour < 17; // Monday-Friday, 9 AM - 5 PM
+  };
+
+  // Initialize chat when opened
+  useEffect(() => {
+    if (isOpen && messages.length === 0) {
+      const businessHours = isBusinessHours();
+      const initialMessage: Message = {
+        id: 1,
+        text: businessHours
+          ? "Hi there! 👋 I'm here to help with your construction needs. We're currently online (9 AM - 5 PM EST). How can I assist you today?"
+          : "Hi there! 👋 Thanks for visiting AGCC! We're currently offline (business hours: 9 AM - 5 PM EST, Monday-Friday), but I can still help answer some questions or you can leave a message!",
+        isBot: true,
+        timestamp: new Date(),
+      };
+      setMessages([initialMessage]);
+    }
+  }, [isOpen]);
+
+  const commonQuestions = [
     {
-      id: 1,
-      text: "Hi there! 👋 I'm Diego from AGCC. Thanks for visiting our website! How can I help you with your construction project today?",
+      id: "services",
+      text: "What services do you offer?",
+      answer:
+        "We provide comprehensive general contracting services including commercial construction, renovations, remodeling, electrical work, plumbing, roofing, and project management. We handle both residential and commercial projects.",
+    },
+    {
+      id: "quote",
+      text: "How do I get a quote?",
+      answer:
+        "Getting a quote is easy! You can call us at " +
+        formattedPhoneNumber +
+        ", email us at " +
+        email +
+        ", or describe your project here and we'll get back to you within 24 hours with a detailed estimate.",
+    },
+    {
+      id: "timeline",
+      text: "How long do projects take?",
+      answer:
+        "Project timelines vary depending on scope and complexity. Small renovations typically take 1-3 weeks, while larger commercial projects can take 2-6 months. We provide detailed timelines during our initial consultation.",
+    },
+    {
+      id: "licensed",
+      text: "Are you licensed and insured?",
+      answer:
+        "Yes! AGCC is fully licensed, bonded, and insured. We carry comprehensive liability insurance and all our work is performed by certified professionals following local building codes.",
+    },
+    {
+      id: "area",
+      text: "What areas do you serve?",
+      answer:
+        "We primarily serve the greater Bethesda, MD area including Montgomery County, Prince George's County, and surrounding Washington DC metropolitan areas.",
+    },
+    {
+      id: "emergency",
+      text: "Do you handle emergencies?",
+      answer:
+        "Yes, we provide emergency construction services for urgent issues like storm damage, structural problems, or emergency repairs. Call us immediately at " +
+        formattedPhoneNumber +
+        " for emergency situations.",
+    },
+  ];
+
+  const handleQuickQuestion = (questionData: (typeof commonQuestions)[0]) => {
+    // Add user question
+    const userMessage: Message = {
+      id: messages.length + 1,
+      text: questionData.text,
+      isBot: false,
+      timestamp: new Date(),
+    };
+
+    // Add bot response
+    const botMessage: Message = {
+      id: messages.length + 2,
+      text: questionData.answer,
       isBot: true,
       timestamp: new Date(),
-    },
-  ]);
+    };
+
+    setMessages((prev) => [...prev, userMessage, botMessage]);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
