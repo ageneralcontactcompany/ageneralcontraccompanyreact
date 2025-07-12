@@ -60,10 +60,10 @@ const Header: React.FC<HeaderProps> = ({ phoneNumber }) => {
                   Services
                 </a>
                 <a
-                  href="#projects"
+                  href="#contact"
                   className="text-black hover:text-brand-primary transition-colors font-medium text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary rounded-md px-2 py-1"
                 >
-                  Projects
+                  Contact
                 </a>
                 <a
                   href={`tel:${phoneNumber}`}
