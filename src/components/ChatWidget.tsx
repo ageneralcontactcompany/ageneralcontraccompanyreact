@@ -133,13 +133,36 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (message.trim()) {
-      // Create a mailto link with the message
+      // Add user message to chat
+      const userMessage: Message = {
+        id: messages.length + 1,
+        text: message,
+        isBot: false,
+        timestamp: new Date(),
+      };
+
+      const responseMessage: Message = {
+        id: messages.length + 2,
+        text: isBusinessHours()
+          ? "Thanks for your message! We'll review your inquiry and get back to you shortly. For immediate assistance, please call us at " +
+            formattedPhoneNumber +
+            "."
+          : "Thanks for your message! Since we're currently outside business hours (9 AM - 5 PM EST), we'll respond first thing during our next business day. For urgent matters, please call " +
+            formattedPhoneNumber +
+            ".",
+        isBot: true,
+        timestamp: new Date(),
+      };
+
+      setMessages((prev) => [...prev, userMessage, responseMessage]);
+
+      // Also create mailto link for backup
       const subject = "Construction Inquiry from Website";
-      const body = `Hi, I have a question about your construction services:\n\n${message}`;
+      const body = `Hi, I have a question about your construction services:\n\n${message}\n\nSent via website chat at ${new Date().toLocaleString()}`;
       const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailtoLink;
+      window.open(mailtoLink, "_blank");
+
       setMessage("");
-      setIsOpen(false);
     }
   };
 
